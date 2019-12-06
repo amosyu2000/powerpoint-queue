@@ -1,0 +1,4 @@
+lxml==4.4.2
+Pillow==6.2.1
+python-pptx==0.6.18
+XlsxWriter==1.2.6
