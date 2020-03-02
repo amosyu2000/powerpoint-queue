@@ -1,6 +1,15 @@
-Amos is the best
-Bettina is not
-Carl
-David
-Evelyn
-Fady
+Maid of Honor
+Bridesmaids
+Best Man
+Groomsmen
+
+Ushers
+
+Bride's Parents
+Groom's Parents
+Grandparents
+
+Officiant
+Flower Girl
+Ring Bearer
+Readers

@@ -1,6 +1,16 @@
 import os
 import pptx
 
+# ===============
+# USER VARIABLES
+# ===============
+
+TEMPLATE = 'night_sky.pptx'
+
+DEST = 'C:/Users/Dell/Downloads'
+SAVE_AS = 'wedding_photo_list.pptx'
+
+
 # ==========
 # CONSTANTS
 # ==========
@@ -8,7 +18,6 @@ import pptx
 TITLE_SLIDE_LAYOUT = 0
 QUEUE_POS = 10
 SLIDE_NUMBER = 15
-DEST = 'C:/Users/Dell/Downloads'
 
 
 def run():
@@ -21,10 +30,13 @@ def run():
 	infile = open('res/q.txt', 'r')
 
 	# Parse queue into list by splitting at the new-line characters
-	queue = infile.read().split('\n')
+	raw_queue = infile.read().split('\n')
+
+	# Filter out blank lines
+	queue = [line for line in raw_queue if line]
 
 	# Open the pptx file
-	presentation = pptx.Presentation('res/template.pptx')
+	presentation = pptx.Presentation('res/templates/'+TEMPLATE)
 	slide_layout = presentation.slide_layouts[TITLE_SLIDE_LAYOUT]
 
 	# For each name in the queue
@@ -52,4 +64,4 @@ def run():
 			slide.placeholders[QUEUE_POS + 4].text = ' '
 
 	# Save the presentation in the user-specified destination
-	presentation.save(DEST+'/template.pptx')
+	presentation.save(DEST+'/'+SAVE_AS)
