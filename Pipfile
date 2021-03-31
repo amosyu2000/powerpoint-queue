@@ -6,7 +6,7 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
-lxml = "==4.4.2"
+lxml = "==4.6.3"
 python-pptx = "==0.6.18"
 Pillow = "==6.2.1"
 XlsxWriter = "==1.2.6"
